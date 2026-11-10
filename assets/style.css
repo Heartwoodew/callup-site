@@ -62,3 +62,31 @@ section{scroll-margin-top:88px}.eyebrow{color:var(--accent2);font-size:12px;font
 .legal h2{font-size:22px;margin-top:28px}.legal p,.legal li{color:var(--muted);max-width:760px}.legal ul{margin-left:22px}
 .foot nav a{margin:0 8px}textarea{width:100%;padding:12px;margin:10px 0;background:var(--bg);color:var(--text);border:1px solid #806044;border-radius:8px;font:inherit;min-height:110px}
 .page-head{padding:56px 0 20px}
+/* App screenshots */
+.shot{margin:0}
+.shot .frame{background:#0d0905;border:1px solid var(--line);overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.shot.phone .frame{border-radius:30px;padding:7px;max-width:290px;margin:0 auto}
+.shot.phone .frame img{border-radius:23px;width:100%;height:auto}
+.shot.desk .frame{border-radius:14px;padding:6px}
+.shot.desk .frame img{border-radius:9px;width:100%;height:auto}
+.shot figcaption{color:var(--muted);font-size:15px;line-height:1.45;margin-top:12px;text-align:center;max-width:300px;margin-left:auto;margin-right:auto}
+.shot.desk figcaption{max-width:none}
+.shot-row{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:32px}
+.wide-shot{margin-top:40px}
+.shots-note{margin-top:16px}
+.feat-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;padding:48px 0}
+.feat-row.flip .feat-media{order:2}
+.feat-row.two .feat-media{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.feat-row.two .shot.phone .frame{max-width:240px}
+.feat-row.feat-wide{grid-template-columns:1fr;gap:24px}
+.feat-row.feat-wide .feat-media{order:2}
+@media(max-width:820px){
+.shot-row{display:flex;overflow-x:auto;gap:18px;scroll-snap-type:x mandatory;padding-bottom:10px;-webkit-overflow-scrolling:touch}
+.shot-row .shot{flex:0 0 72%;scroll-snap-align:center}
+.feat-row,.feat-row.flip{grid-template-columns:1fr;gap:24px;padding:36px 0}
+.feat-row .feat-media,.feat-row.flip .feat-media{order:0}
+.feat-row.feat-wide .feat-media{order:0}
+.shot.phone .frame{max-width:260px}
+}
+@media(max-width:480px){.feat-row.two .feat-media{grid-template-columns:1fr;gap:28px}.feat-row.two .shot.phone .frame{max-width:260px}}
+.foot nav{display:flex;flex-wrap:wrap;justify-content:center;row-gap:6px}
