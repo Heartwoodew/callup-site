@@ -167,6 +167,12 @@ section{scroll-margin-top:88px}.eyebrow{color:var(--accent2);font-size:12px;font
 .feat-card:hover .frame::after,.shot-row .shot:hover .frame::after{background-color:rgba(224,145,60,.9)}
 }
 
-/* Overview video */
+/* Overview video in the hero */
 .video-frame{box-shadow:0 16px 40px rgba(0,0,0,.35)}
 .video-frame video{display:block;width:100%;height:auto;max-width:100%;aspect-ratio:16/9;background:#000}
+.hero-video{min-width:0}
+.hero .video-frame{margin-top:0}
+.hero-video .small-note{margin-top:8px}
+@media(min-width:821px){
+.hero{grid-template-columns:1fr 1.15fr;align-items:center}
+}
