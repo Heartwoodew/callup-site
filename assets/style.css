@@ -166,3 +166,7 @@ section{scroll-margin-top:88px}.eyebrow{color:var(--accent2);font-size:12px;font
 .feat-card:hover,.shot-row .shot:hover{border-color:var(--accent)}
 .feat-card:hover .frame::after,.shot-row .shot:hover .frame::after{background-color:rgba(224,145,60,.9)}
 }
+
+/* Overview video */
+.video-frame{box-shadow:0 16px 40px rgba(0,0,0,.35)}
+.video-frame video{display:block;width:100%;height:auto;max-width:100%;aspect-ratio:16/9;background:#000}
