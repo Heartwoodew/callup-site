@@ -166,9 +166,13 @@ section{scroll-margin-top:88px}.eyebrow{color:var(--accent2);font-size:12px;font
 }
 @media(hover:hover) and (pointer:fine){
 .zoom-back,.zoom-pop{transition:opacity .18s ease,transform .18s ease}
-.feat-card:hover,.shot-row .shot:hover{border-color:var(--accent)}
-.feat-card:hover .frame::after,.shot-row .shot:hover .frame::after{background-color:rgba(240,90,22,.9)}
 }
+/* Click/tap to enlarge: real buttons, no hover-open */
+.shot-toggle,.feat-toggle{display:block;width:100%;margin:0;padding:0;border:0;background:transparent;color:inherit;font:inherit;text-align:inherit;cursor:pointer;border-radius:inherit}
+.feat-toggle{display:flex;flex-direction:column;gap:8px;flex:1;min-width:0}
+.shot-row .shot.row-desk .shot-toggle{display:flex;flex-direction:column;flex:1;height:100%;min-width:0}
+.shot-toggle:focus-visible,.feat-toggle:focus-visible{outline:2px solid var(--accent2);outline-offset:3px;border-radius:14px}
+
 
 /* Overview video in the hero */
 .video-frame{box-shadow:0 16px 40px rgba(0,0,0,.35)}

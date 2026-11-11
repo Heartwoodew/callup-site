@@ -5,15 +5,16 @@ i.addEventListener('input',u);i.addEventListener('change',function(){i.value=Mat
 (function(){
   var items=[].slice.call(document.querySelectorAll("[data-zoom]"));
   if(!items.length) return;
-  var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var coarse=window.matchMedia("(pointer: coarse)").matches;
-  var pop, back, openFor=null, hoverTimer=null, sticky=false, suppressFocus=false;
+  var pop, back, openFor=null;
 
   function el(tag, cls, html){
     var n=document.createElement(tag);
     if(cls) n.className=cls;
     if(html!=null) n.innerHTML=html;
     return n;
+  }
+  function rootOf(item){
+    return item.closest("figure, article") || item;
   }
   function ensure(){
     if(pop) return;
@@ -24,16 +25,15 @@ i.addEventListener('input',u);i.addEventListener('change',function(){i.value=Mat
     pop=el("div","zoom-pop");
     pop.setAttribute("role","dialog");
     pop.setAttribute("aria-modal","true");
-    pop.addEventListener("mouseenter", function(){ if(!coarse) clearTimeout(hoverTimer); });
-    pop.addEventListener("mouseleave", function(){ if(!coarse && !sticky) schedule(); });
     document.body.appendChild(back);
     document.body.appendChild(pop);
   }
   function fill(item){
     var title=item.getAttribute("data-zoom-title")||"";
-    var deep=item.querySelector(".feat-deep");
-    var imgs=[].slice.call(item.querySelectorAll(".frame img"));
-    var desk=!!item.querySelector(".shot.desk, .shot.row-desk") || item.classList.contains("wide");
+    var root=rootOf(item);
+    var deep=root.querySelector(".feat-deep");
+    var imgs=[].slice.call(root.querySelectorAll(".frame img"));
+    var desk=!!root.querySelector(".shot.desk, .shot.row-desk") || root.classList.contains("wide");
     var pair=imgs.length>1;
     pop.className="zoom-pop"+(desk?" is-desk":"")+(pair?" is-pair":"");
     pop.innerHTML="";
@@ -63,7 +63,7 @@ i.addEventListener('input',u);i.addEventListener('change',function(){i.value=Mat
     pop.appendChild(h);
     pop.appendChild(p);
   }
-  function place(item){
+  function place(){
     pop.style.left="0px";
     pop.style.top="0px";
     var pw=pop.offsetWidth, ph=pop.offsetHeight, pad=12;
@@ -77,65 +77,39 @@ i.addEventListener('input',u);i.addEventListener('change',function(){i.value=Mat
   function setExpanded(item, on){
     items.forEach(function(el){ el.setAttribute("aria-expanded", el===item && on ? "true":"false"); });
   }
-  function open(item, fromClick){
+  function open(item){
     ensure();
-    clearTimeout(hoverTimer);
-    if(openFor && openFor!==item){ openFor=null; }
     fill(item);
     openFor=item;
-    sticky=!!fromClick;
     pop.classList.add("on");
     back.classList.add("on");
-    if(fromClick || coarse) back.classList.add("clickable");
-    else back.classList.remove("clickable");
+    back.classList.add("clickable");
     setExpanded(item, true);
-    place(item);
-    requestAnimationFrame(function(){ if(openFor===item) place(item); });
-    if(fromClick){ var btn=pop.querySelector(".zoom-close"); if(btn) btn.focus(); }
+    place();
+    requestAnimationFrame(function(){ if(openFor===item) place(); });
+    var btn=pop.querySelector(".zoom-close");
+    if(btn) btn.focus();
   }
   function close(fromAction){
-    clearTimeout(hoverTimer);
     if(!openFor) return;
     var was=openFor;
     openFor=null;
-    sticky=false;
     if(pop) pop.classList.remove("on");
     if(back){ back.classList.remove("on"); back.classList.remove("clickable"); }
     setExpanded(was, false);
-    if(fromAction && was && typeof was.focus==="function"){
-      suppressFocus=true;
-      was.focus();
-      suppressFocus=false;
-    }
-  }
-  function schedule(){
-    clearTimeout(hoverTimer);
-    hoverTimer=setTimeout(function(){ if(!sticky) close(); }, 140);
+    if(fromAction && was && typeof was.focus==="function") was.focus();
   }
   items.forEach(function(item){
-    if(!item.hasAttribute("tabindex")) item.tabIndex=0;
-    item.setAttribute("role","button");
     item.setAttribute("aria-haspopup","dialog");
-    item.setAttribute("aria-expanded","false");
-    item.addEventListener("mouseenter", function(){ if(!coarse) open(item, false); });
-    item.addEventListener("mouseleave", function(){ if(!coarse && !sticky) schedule(); });
-    item.addEventListener("focus", function(){ if(!coarse && !suppressFocus) open(item, false); });
-    item.addEventListener("blur", function(){ if(!coarse && !sticky) schedule(); });
+    if(!item.hasAttribute("aria-expanded")) item.setAttribute("aria-expanded","false");
     item.addEventListener("click", function(e){
       e.preventDefault();
       e.stopPropagation();
-      if(openFor===item && sticky){ close(true); return; }
-      open(item, true);
-    });
-    item.addEventListener("keydown", function(e){
-      if(e.key==="Enter" || e.key===" "){
-        e.preventDefault();
-        if(openFor===item && sticky) close(true);
-        else open(item, true);
-      }
+      if(openFor===item){ close(true); return; }
+      open(item);
     });
   });
   document.addEventListener("keydown", function(e){ if(e.key==="Escape") close(true); });
-  window.addEventListener("resize", function(){ if(openFor) place(openFor); });
-  window.addEventListener("scroll", function(){ if(openFor) place(openFor); }, {passive:true});
+  window.addEventListener("resize", function(){ if(openFor) place(); });
+  window.addEventListener("scroll", function(){ if(openFor) place(); }, {passive:true});
 })();
