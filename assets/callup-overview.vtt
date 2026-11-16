@@ -1,59 +1,199 @@
 WEBVTT
 
-00:00.800 --> 00:09.589
-Meet CallUp, the job app built for civil and earthmoving crews. The office books and dispatches the work, and the crew runs their day from their phone.
+00:00:00.800 --> 00:00:03.462
+Meet CallUp, the job app for trade crews:
 
-00:11.140 --> 00:22.127
-Admins start on the dashboard. Today's and tomorrow's jobs are up front, along with anything that needs attention, like rego, insurance, or unsigned safety documents.
+00:00:03.462 --> 00:00:08.266
+earthworks, landscaping, concreting, fencing,
+carpentry, tiling, plumbing,
 
-00:23.520 --> 00:28.939
-The dispatch board lays out the week by crew. Drag a job to another day, and it's rescheduled.
+00:00:08.266 --> 00:00:10.343
+electrical and concrete cutting.
 
-00:30.439 --> 00:36.177
-Each job keeps the client, site address, purchase order, crew and notes together, with a full history.
+00:00:10.343 --> 00:00:13.329
+Every trade gets its own formula-based
+quotes.
 
-00:37.677 --> 00:44.952
-Quoting is three quick steps. Describe the job, pick the machines, add a labourer, and CallUp prices it from your own rates.
+00:00:13.329 --> 00:00:15.991
+The office books and dispatches the work,
 
-00:46.989 --> 00:53.176
-On site, operators open their run sheet, start the job, and send stamped site photos to the office.
+00:00:15.991 --> 00:00:18.912
+and the crew runs their day from their
+phone.
 
-00:57.239 --> 01:01.634
-Clocking on records the time and location, then asks which machine they're running.
+00:00:20.460 --> 00:00:23.355
+Admins and managers start on the home
+screen.
 
-01:07.677 --> 01:12.540
-Daily pre-start checks are tapped through on the phone, and every result is kept on record.
+00:00:23.355 --> 00:00:27.473
+Anything that needs attention is up front,
+like rego, insurance,
 
-01:17.552 --> 01:21.243
-Staff can request leave straight from the app, and see when it's been approved.
+00:00:27.473 --> 00:00:29.210
+or a job with no PO number.
 
-01:26.552 --> 01:29.688
-Expenses are claimed by snapping a photo of the receipt.
+00:00:29.210 --> 00:00:32.878
+Below that, a live map shows the crew who
+are clocked on.
 
-01:36.989 --> 01:40.978
-SWMS are read and signed with a finger, and every signature is logged.
+00:00:32.878 --> 00:00:36.545
+Their location is only shared while they're
+on the clock.
 
-01:47.489 --> 01:51.221
-Back in the office, leave and expense claims are approved in a tap.
+00:00:38.045 --> 00:00:40.801
+The dispatch board lays out the week by
+crew.
 
-01:56.364 --> 02:02.973
-Compliance tracks rego, inspection certificates, servicing, and insurance, and flags anything coming due.
+00:00:40.801 --> 00:00:44.046
+Start times are spaced by each job's
+estimated hours,
 
-02:05.427 --> 02:10.334
-Timesheets roll up by pay period, and download as a spreadsheet, ready for payroll.
+00:00:44.046 --> 00:00:47.475
+and the capacity view shows who's free and
+who's booked.
 
-02:14.833 --> 02:18.396
-Invite your team by email, and give each person the right role.
+00:00:48.975 --> 00:00:53.594
+Each job keeps the client, site address,
+purchase order, crew and notes together,
 
-02:22.208 --> 02:24.597
+00:00:53.594 --> 00:00:54.735
+with a full history.
+
+00:00:56.213 --> 00:00:58.554
+Attach plans and documents to any job.
+
+00:00:58.554 --> 00:01:01.695
+Mark a file office only, and the crew never
+see it.
+
+00:01:07.838 --> 00:01:10.027
+Quoting is built around your trade.
+
+00:01:10.027 --> 00:01:14.282
+Every trade has its own quote pack, with its
+own formulas and rates.
+
+00:01:14.282 --> 00:01:16.284
+Earthworks is priced by machine:
+
+00:01:16.284 --> 00:01:19.912
+pick the plant, add a labourer, and set the
+hours on site.
+
+00:01:21.412 --> 00:01:23.525
+Every pack comes with starting rates.
+
+00:01:23.525 --> 00:01:27.236
+Save your own rates once, and every quote
+uses them from then on.
+
+00:01:32.412 --> 00:01:36.341
+Fencing, concreting, landscaping and the
+other trades are measured.
+
+00:01:36.341 --> 00:01:40.269
+Enter the lengths, areas and quantities, and
+CallUp does the maths.
+
+00:01:42.662 --> 00:01:45.068
+One quote can cover several trades.
+
+00:01:45.068 --> 00:01:49.811
+Each section gets its own subtotal, with GST
+added once on the total.
+
+00:01:49.811 --> 00:01:54.417
+When the client says yes, tap Quote
+accepted, and it becomes a job.
+
+00:01:57.412 --> 00:02:00.860
+On site, operators open their run sheet,
+start the job,
+
+00:02:00.860 --> 00:02:03.556
+and send stamped site photos to the office.
+
+00:02:07.679 --> 00:02:11.067
+Before starting a job, the crew complete a
+quick Take 5:
+
+00:02:11.067 --> 00:02:14.698
+five steps and a note on the hazards, saved
+against the job.
+
+00:02:17.116 --> 00:02:21.362
+Clocking on records the time and location, then
+asks which machine they're running.
+
+00:02:27.554 --> 00:02:30.526
+Daily pre-start checks are tapped through on
+the phone,
+
+00:02:30.526 --> 00:02:32.417
+and every result is kept on record.
+
+00:02:37.429 --> 00:02:41.120
+Staff can request leave straight from the app,
+and see when it's been approved.
+
+00:02:46.429 --> 00:02:49.587
+Expenses are claimed by snapping a photo of
+the receipt.
+
+00:02:56.867 --> 00:03:00.857
+SWMS are read and signed with a finger, and
+every signature is logged.
+
+00:03:07.367 --> 00:03:11.058
+Back in the office, leave and expense claims
+are approved in a tap.
+
+00:03:16.242 --> 00:03:20.999
+Compliance tracks rego and inspection
+certificates, servicing, and insurance,
+
+00:03:20.999 --> 00:03:22.852
+and flags anything coming due.
+
+00:03:25.309 --> 00:03:30.216
+Timesheets roll up by pay period, and download as
+a spreadsheet, ready for payroll.
+
+00:03:34.716 --> 00:03:39.963
+Staff performance ranks your crew on hours,
+completed jobs, pre-starts and Take 5s,
+
+00:03:39.963 --> 00:03:41.607
+for any period you choose.
+
+00:03:43.966 --> 00:03:48.830
+Invite your team by email. Their job title sets
+what each person can see and do.
+
+00:03:51.466 --> 00:03:53.855
 Team chat keeps everyone on the same page.
 
-02:29.208 --> 02:34.285
-Getting started takes a minute. Sign up for a fourteen day free trial. No card needed.
+00:03:58.466 --> 00:04:02.863
+Phones get a ping for new chat messages, and a
+morning list of the day's jobs.
 
-02:35.786 --> 02:43.615
-CallUp is twenty dollars a month plus GST, including one person, and just five dollars a month for each extra staff member.
+00:04:04.591 --> 00:04:06.463
+Getting started takes a minute.
 
-02:45.927 --> 02:49.056
+00:04:06.463 --> 00:04:10.266
+Pick your trades and start a 14-day free
+trial. No card needed.
+
+00:04:11.766 --> 00:04:16.347
+CallUp is $50 a month plus GST, including
+one person,
+
+00:04:16.347 --> 00:04:20.150
+and $5 a month plus GST for each extra user.
+
+00:04:21.950 --> 00:04:24.659
+Formula-based quoting for every trade.
+
+00:04:24.659 --> 00:04:27.582
 Start your free trial at callupapp.com.au
 
