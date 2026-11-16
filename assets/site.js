@@ -113,3 +113,14 @@ i.addEventListener('input',u);i.addEventListener('change',function(){i.value=Mat
   window.addEventListener("resize", function(){ if(openFor) place(); });
   window.addEventListener("scroll", function(){ if(openFor) place(); }, {passive:true});
 })();
+
+(function(){
+  function openHash(){
+    var id=(location.hash||"").replace(/^#/,"");
+    if(!id) return;
+    var el=document.getElementById(id);
+    if(el && el.tagName==="DETAILS") el.open=true;
+  }
+  openHash();
+  window.addEventListener("hashchange", openHash);
+})();

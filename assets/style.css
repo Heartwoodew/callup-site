@@ -248,3 +248,11 @@ input,textarea{border-radius:4px;border-color:#6b7554}
 .zoom-pop.is-text:not(.is-desk):not(.is-pair){width:min(520px,calc(100vw - 24px));display:block}
 .zoom-pop.is-text .zoom-shots{display:none}
 .zoom-pop.is-text:not(.is-desk):not(.is-pair) h3{margin-top:4px}
+
+/* referral bonus (16 Nov) */
+.referral{margin-top:24px;padding:18px 20px;background:linear-gradient(180deg,rgba(215,178,90,.07),transparent 42%),var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:inset 4px 0 0 var(--brass),inset 0 1px 0 rgba(215,178,90,.14)}
+.referral .eyebrow{margin-bottom:10px}
+.referral h2{font-size:clamp(18px,2.6vw,24px);margin-bottom:8px}
+.referral p{color:var(--muted);font-size:15px;max-width:760px}
+.referral p+p{margin-top:10px}
+section.section-rule > .referral{margin-top:0}
